@@ -1,4 +1,4 @@
-# Systems-Lab16-Handshake
+# Systems - Lab Handshake
 
 Fill in the function definitions for server_handshake and client_handshake in pipe_networking.c.
 
