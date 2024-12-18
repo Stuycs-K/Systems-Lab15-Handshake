@@ -1,11 +1,10 @@
 #include "pipe_networking.h"
-
-
+//UPSTREAM = to the server / from the client
+//DOWNSTREAM = to the client / from the server
 /*=========================
   server_setup
-  args:
 
-  creates the WKP (upstream) and opens it, waiting for a  connection.
+  creates the WKP and opens it, waiting for a  connection.
   removes the WKP once a connection has been made
 
   returns the file descriptor for the upstream pipe.
@@ -16,13 +15,13 @@ int server_setup() {
 }
 
 /*=========================
-  server_handshake
+  server_handshake 
   args: int * to_client
 
   Performs the server side pipe 3 way handshake.
-  Sets *to_client to the file descriptor to the downstream pipe.
+  Sets *to_client to the file descriptor to the downstream pipe (Client's private pipe).
 
-  returns the file descriptor for the upstream pipe.
+  returns the file descriptor for the upstream pipe (see server setup).
   =========================*/
 int server_handshake(int *to_client) {
   int from_client;
