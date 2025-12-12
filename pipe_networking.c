@@ -1,18 +1,6 @@
 #include "pipe_networking.h"
-//UPSTREAM = to the server / from the client
-//DOWNSTREAM = to the client / from the server
-/*=========================
-  server_setup
-
-  creates the WKP and opens it, waiting for a  connection.
-  removes the WKP once a connection has been made
-
-  returns the file descriptor for the upstream pipe.
-  =========================*/
-int server_setup() {
-  int from_client = 0;
-  return from_client;
-}
+//UPSTREAM = away from the process. e.g. Client up is to the server.
+//DOWNSTREAM = towards the process. e.g. Client down is to the client.
 
 /*=========================
   server_handshake 
@@ -44,8 +32,24 @@ int client_handshake(int *to_server) {
 }
 
 
+
 /*=========================
-  server_connect
+  server_setup (forking server)
+
+  handles the forking server portion of the 3way handshake.
+  
+  creates the WKP and opens it, waiting for a  connection.
+  removes the WKP once a connection has been made
+
+  returns the file descriptor for the upstream pipe.
+  =========================*/
+int server_setup() {
+  int from_client = 0;
+  return from_client;
+}
+
+/*=========================
+  server_connect (forking server)
   args: int from_client
 
   handles the subserver portion of the 3 way handshake
