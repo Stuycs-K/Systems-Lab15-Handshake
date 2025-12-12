@@ -32,33 +32,3 @@ int client_handshake(int *to_server) {
 }
 
 
-
-/*=========================
-  server_setup (forking server)
-
-  handles the forking server portion of the 3way handshake.
-  
-  creates the WKP and opens it, waiting for a  connection.
-  removes the WKP once a connection has been made
-
-  returns the file descriptor for the upstream pipe.
-  =========================*/
-int server_setup() {
-  int from_client = 0;
-  return from_client;
-}
-
-/*=========================
-  server_connect (forking server)
-  args: int from_client
-
-  handles the subserver portion of the 3 way handshake
-
-  returns the file descriptor for the downstream pipe.
-  =========================*/
-int server_connect(int from_client) {
-  int to_client  = 0;
-  return to_client;
-}
-
-
