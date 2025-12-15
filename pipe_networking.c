@@ -7,7 +7,7 @@
   args: int * to_client
 
   Performs the server side pipe 3 way handshake.
-  Sets *to_client to the file descriptor to the downstream pipe (Client's private pipe).
+  Sets *to_client to the file descriptor to the upstream pipe (Client's private pipe).
 
   returns the file descriptor for the upstream pipe (see server setup).
   =========================*/
