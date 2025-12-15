@@ -13,17 +13,8 @@
 
 #define HANDSHAKE_BUFFER_SIZE 10
 #define BUFFER_SIZE 1000
-#define MAX_CLIENTS 100
-
-#define SYN 0
-#define SYN_ACK 1
-#define ACK 2
 
 int server_handshake(int *to_client);
 int client_handshake(int *to_server);
-
-//used by server handshake
-int server_setup();
-
 
 #endif
